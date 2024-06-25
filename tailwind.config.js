@@ -7,6 +7,13 @@ export default {
   theme: {
     extend: {},
   },
+  variants: {
+    extend: {
+      backgroundColor: ['active'],
+      borderColor: ['active'],
+      textColor: ['active'],
+    },
+  },
   plugins: [],
 }
 

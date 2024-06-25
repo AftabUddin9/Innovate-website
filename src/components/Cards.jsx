@@ -1,11 +1,12 @@
 import React from 'react'
+import cardImg from '../assets/images.png'
 
 const Cards = () => {
     const cardDetails = [
-        { imgSource: '../assets/images.png', heading: '2021', sub: 'Establishment year' },
-        { imgSource: '../assets/images.png', heading: '8', sub: 'Concerns' },
-        { imgSource: '../assets/images.png', heading: '300+', sub: 'Clients' },
-        { imgSource: '../assets/images.png', heading: '1500+', sub: 'projects Completed' },
+        { imgSource: cardImg, heading: '2021', sub: 'Establishment year' },
+        { imgSource: cardImg, heading: '8', sub: 'Concerns' },
+        { imgSource: cardImg, heading: '300+', sub: 'Clients' },
+        { imgSource: cardImg, heading: '1500+', sub: 'projects Completed' },
     ]
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 py-12 px-3 sm:px-5 md:px-10 2xl:px-[135px] max-w-[1366px] mx-auto mb-12 w-full'>
@@ -23,6 +24,7 @@ const Cards = () => {
                                 <p className='text-[#586176] text-[16px] font-[400]'>{items.sub}</p>
                             </div>
                         </div>
+                        <div className='absolute left-0 bottom-0 h-[4px] bg-[#971b1f] w-0 group-hover:w-full transition-[width] ease duration-300' />
                     </div>
                 )
             }

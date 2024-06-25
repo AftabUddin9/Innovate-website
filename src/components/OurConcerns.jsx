@@ -17,19 +17,25 @@ const OurConcerns = () => {
             <div className='flex flex-col gap-4 -mb-2'>
                 <div className='flex flex-wrap items-center justify-center gap-7'>
                     <div className='relative group'>
-                        <button className='text-[18px] font-semibold text-[#E64D53] hover:text-[#E01F26]'>NextGen Tech</button>
+                        <button className='text-[18px] font-semibold text-[#313E5B] hover:text-[#E01F26]'>NextGen Tech</button>
+                        <div className='absolute left-1/2 transform -translate-x-1/2 top-8 h-[2px] bg-[#E01F26] transition-all ease duration-300 w-5' />
+                        <div className='absolute left-1/2 transform -translate-x-1/2 top-8 h-[2px] bg-[#E01F26] w-0 transition-all ease duration-300 group-hover:w-5' />
                     </div>
                     <div className='relative group'>
-                        <button className='text-[18px] font-semibold text-[#E64D53] hover:text-[#E01F26]'>Innovate Digital</button>
+                        <button className='text-[18px] font-semibold text-[#313E5B] hover:text-[#E01F26]'>Innovate Digital</button>
+                        <div className='absolute left-1/2 transform -translate-x-1/2 top-8 h-[2px] bg-[#E01F26] w-0 transition-all ease duration-300 group-hover:w-5' />
                     </div>
                     <div className='relative group'>
-                        <button className='text-[18px] font-semibold text-[#E64D53] hover:text-[#E01F26]'>Inventa</button>
+                        <button className='text-[18px] font-semibold text-[#313E5B] hover:text-[#E01F26]'>Inventa</button>
+                        <div className='absolute left-1/2 transform -translate-x-1/2 top-8 h-[2px] bg-[#E01F26] w-0 transition-all ease duration-300 group-hover:w-5' />
                     </div>
                     <div className='relative group'>
-                        <button className='text-[18px] font-semibold text-[#E64D53] hover:text-[#E01F26]'>InnoSphere</button>
+                        <button className='text-[18px] font-semibold text-[#313E5B] hover:text-[#E01F26]'>InnoSphere</button>
+                        <div className='absolute left-1/2 transform -translate-x-1/2 top-8 h-[2px] bg-[#E01F26] w-0 transition-all ease duration-300 group-hover:w-5' />
                     </div>
                     <div className='relative group'>
-                        <button className='text-[18px] font-semibold text-[#E64D53] hover:text-[#E01F26]'>Find a Job</button>
+                        <button className='text-[18px] font-semibold text-[#313E5B] hover:text-[#E01F26]'>Find a Job</button>
+                        <div className='absolute left-1/2 transform -translate-x-1/2 top-8 h-[2px] bg-[#E01F26] w-0 transition-all ease duration-300 group-hover:w-5' />
                     </div>
                 </div>
                 <div>
