@@ -1,12 +1,18 @@
 import './App.css'
-import { BrowserRouter } from 'react-router-dom'
-import Home from './components/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// import Home from './components/Home'
+// import JoinUs from './components/JoinUs'
+import MainComponent from './components/MainComponent'
+import JoinUs from './components/JoinUs'
 
 function App() {
 
   return (
     <BrowserRouter>
-      <Home />
+      <Routes>
+        <Route path='/' element={<MainComponent />} />
+        <Route path='/joinUs' element={<JoinUs />} />
+      </Routes>
     </BrowserRouter>
   )
 }

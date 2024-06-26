@@ -5,3 +5,7 @@
 .show-content {
     display: block;
 }
+
+.active {
+    color: #E01F26;
+}
