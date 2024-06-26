@@ -1,12 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
+// import { Link } from 'react-scroll';
 import logo from '../assets/innovate-logo.png'
 
 const Navbar = () => {
     const navItems = [
-        { link: "Home", path: "home" },
-        { link: "About", path: "about" },
-        { link: "Concerns", path: "concerns" },
+        { link: "Home", path: "/" },
+        { link: "About", path: "#about" },
+        { link: "Concerns", path: "#concerns" },
         { link: "Career", path: "joinUs" },
     ]
     return (

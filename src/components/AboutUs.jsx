@@ -39,7 +39,7 @@ const AboutUs = () => {
 
 
     return (
-        <div className='flex flex-col 2xl:flex-row justify-center h-full'>
+        <div id="about" className='flex flex-col 2xl:flex-row justify-center h-full'>
             <div className='flex flex-col gap-12 2xl:gap-0 w-full 2xl:w-1/2'>
                 <div className='flex flex-col items-center justify-center'>
                     <h3 className='uppercase text-[16px] font-normal text-[#E64D53] font-outfit'>About Us</h3>

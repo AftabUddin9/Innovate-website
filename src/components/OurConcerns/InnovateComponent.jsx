@@ -1,9 +1,8 @@
 import React from 'react'
 import Lottie from 'react-lottie';
-import innovateAnim from '../../assets/animation/innovateAnim.json';
 
-const InnovateComponent = ({ toggleVal2 }) => {
-    console.log(toggleVal2)
+
+const InnovateComponent = ({ toggle }) => {
     const innovateDefaultOptions = {
         loop: true,
         autoplay: true,
@@ -13,7 +12,7 @@ const InnovateComponent = ({ toggleVal2 }) => {
         }
     };
     return (
-        <div className={toggleVal2}>
+        <div className={`${toggle === 2 ? "block " : "hidden"}`}>
             <div className='flex 2xl:flex-row flex-col justify-center items-center'>
                 <div className='w-full 2xl:w-1/2'>
                     <p className='text-[16px] font-normal text-[#525f81] leading-8 p-2 2xl:-mt-12 mt-6'>Innovate Digital is a leading digital marketing agency that helps businesses thrive in the online world. Our team of experts specializes in creating strategic digital marketing campaigns that drive traffic, generate leads, and increase conversions. With a focus on innovation and creativity, we deliver customized solutions that elevate brands and deliver measurable results in the ever-evolving digital landscape.</p>

@@ -1,8 +1,8 @@
 import React from 'react'
 import Lottie from 'react-lottie';
-import findJobAnim from '../../assets/animation/findJobAnim.json';
 
-const FindJobComponent = ({ toggleVal5 }) => {
+
+const FindJobComponent = ({ toggle }) => {
     const findJobDefaultOptions = {
         loop: true,
         autoplay: true,
@@ -12,7 +12,7 @@ const FindJobComponent = ({ toggleVal5 }) => {
         }
     };
     return (
-        <div className={toggleVal5}>
+        <div className={`${toggle === 5 ? "block " : "hidden"}`}>
             <div className='flex 2xl:flex-row flex-col justify-center items-center'>
                 <div className='w-full 2xl:w-1/2'>
                     <p className='text-[16px] font-normal text-[#525f81] leading-8 p-2 2xl:-mt-12 mt-6'>Find a Job is your go-to destination for career opportunities. As a leading job portal, we connect talented individuals with their dream jobs and help businesses find the perfect candidates for their teams. With user-friendly features and a vast database of job listings, we make the job search process simple, efficient, and rewarding for both job seekers and employers alike.</p>

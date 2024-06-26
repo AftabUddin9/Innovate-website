@@ -1,8 +1,8 @@
 import React from 'react'
 import Lottie from 'react-lottie';
-import inventaAnim from '../../assets/animation/inventaAnim.json';
 
-const InventaComponent = ({ toggleVal3 }) => {
+
+const InventaComponent = ({ toggle }) => {
     const inventaDefaultOptions = {
         loop: true,
         autoplay: true,
@@ -12,7 +12,7 @@ const InventaComponent = ({ toggleVal3 }) => {
         }
     };
     return (
-        <div className={toggleVal3}>
+        <div className={`${toggle === 3 ? "block " : "hidden"}`}>
             <div className='flex 2xl:flex-row flex-col justify-center items-center'>
                 <div className='w-full 2xl:w-1/2'>
                     <p className='text-[16px] font-normal text-[#525f81] leading-8 p-2 2xl:-mt-12 mt-6'>Inventa is your trusted partner in the world of dropshipping. We provide comprehensive dropshipping solutions that streamline supply chain operations and maximize efficiency for businesses worldwide. With a commitment to innovation and excellence, we empower businesses to expand their reach and achieve success in today's competitive marketplace.</p>
