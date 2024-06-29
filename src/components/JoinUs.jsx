@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 const JoinUs = () => {
     return (
@@ -57,7 +58,7 @@ const JoinUs = () => {
                 <div className='class="bg-[#FAFAFA]"'>
                     <div className=' px-3 sm:px-5 md:px-10 2xl:px-[135px] max-w-[1366px] mx-auto  '>
                         <div className='flex justify-center'>
-                            <p className='text-[30px] border-b-2 border-borderPrimary text-[#E01F26] font-semibold text-center pt-8 pb-1 inline-block'>OPEN POSITIONS</p>
+                            <p className='text-[30px] border-b-2 border-[#FCB8A6] text-[#E01F26] font-semibold text-center pt-8 pb-1 inline-block'>OPEN POSITIONS</p>
                         </div>
                         <div className='flex flex-col gap-5 pb-12 mt-6'>
                             <div className='border gap-6 bg-white p-6 flex flex-col rounded-xl'>
@@ -75,9 +76,9 @@ const JoinUs = () => {
                                     <div className='md:flex md:flex-col p-2 md:justify-center md:items-center gap-4 mt-3 md:mt-0'>
                                         <p className='flex w-full items-center gap-x-2 font-semibold'>$ Industry Standard</p>
                                         <div className='w-full mt-5 md:mt-0'>
-                                            <a className='px-4 sm:px-8 py-2 sm:py-2.5 bg-[#E01F26] hover:bg-[#971B1F] text-sm font-semibold text-white leading-[20px] rounded-[24px] mt-5 md:mt-0' href=''>
+                                            <Link to='' className='px-4 sm:px-8 py-2 sm:py-2.5 bg-[#E01F26] hover:bg-[#971B1F] text-sm font-semibold text-white leading-[20px] rounded-[24px] mt-5 md:mt-0'>
                                                 APPLY NOW
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -85,11 +86,6 @@ const JoinUs = () => {
                                     <div className='flex flex-col gap-6'>
                                         <div className='block relative w-full'>
                                             <button className='w-full py-4 border-b border-b-blue-gray-100 text-blue-gray-700 antialiased text-xl text-left font-semibold leading-snug select-none hover:text-blue-gray-900 transition-colors flex items-center justify-start gap-4 border-none font-outfit'>+ More Details</button>
-                                            <div className='overflow-hidden h-0'>
-                                                <div className='block w-full py-4 antialiased pl-9 pt-0 mt-0 text-[16px] font-normal font-outfit text-[#525f81]'>
-
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
