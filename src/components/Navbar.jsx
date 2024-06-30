@@ -6,9 +6,9 @@ import logo from '../assets/innovate-logo.png'
 const Navbar = () => {
     const navItems = [
         { link: "Home", path: "/" },
-        { link: "About", path: "#about" },
-        { link: "Concerns", path: "#concerns" },
-        { link: "Career", path: "joinUs" },
+        { link: "About", path: "/#about" },
+        { link: "Concerns", path: "/#concerns" },
+        { link: "Career", path: "/joinUs" },
     ]
     return (
         <section className='bg-[#FFFFFF]'>
@@ -26,7 +26,7 @@ const Navbar = () => {
                                 }
                             </ul>
                             <div className='flex items-center gap-x-2'>
-                                <Link to='joinUs'>
+                                <Link to='/#joinUs'>
                                     <button className="bg-[#E01F26] text-white xl:ml-5 2xl:ml-16 xs-inline-block px-7 py-2 rounded-l-full rounded-r-full hover:bg-[#971B1F] transition-all duration-100 gap-x-2">
                                         <span className='px-2 py-1'>Join Us</span>
                                     </button>

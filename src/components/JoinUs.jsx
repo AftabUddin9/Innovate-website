@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { Link } from 'react-router-dom';
+import FetchApi from './JoinUs/FetchApi';
+
+const data = [
+    { question: 'Why should you join us?', answer: 'If you are looking for a company that provides the opportunity to flourish your talents and showcase your creativity with the highest amount of flexibility, then look no further. innovate international is here for you. Working with us will not only benefit you financially but also give a lifelong experience and help you develop your real-life skills as well. We ensure the utmost friendly environment for every single employee and consider the whole team as a family.' },
+    { question: 'Whom do we look for?', answer: 'Anyone, even you. Yes, if you are passionate about your work, if you are ready for taking up challenges and conquering them if you have the enthusiasm to learn new things as well as to share your wisdom if you are a person who believes in sharing interpersonal skills and growing together, then you are the perfect match that we are looking for.' },
+];
 
 const JoinUs = () => {
+    const [selected, setSelected] = useState(0);
+
+    const toggle = (i) => {
+        if (selected == i) {
+            return setSelected(null)
+        }
+        setSelected(i)
+    };
+
     return (
         <div className='w-full font-outfit'>
             <div>
@@ -20,28 +34,21 @@ const JoinUs = () => {
                         </div>
                         <div className='grid grid-cols-1 2xl:grid-cols-2 gap-4 my-12'>
                             <div className='flex flex-col gap-6'>
-                                <div className='block relative w-full bg-white px-6 py-3 rounded-lg'>
-                                    <button className='w-full py-4 border-b border-b-blue-gray-100 antialiased text-xl text-left font-semibold leading-snug select-none hover:text-blue-gray-900 transition-colors text-blue-gray-900 flex items-center justify-start gap-4 border-none font-outfit'>
-                                        X
-                                        <span className='text-[16px] font-semibold text-[#313e5b]'>Why should you join us?</span>
-                                    </button>
-                                    <div className='overflow-hidden h-auto'>
-                                        <div className='block w-full py-4 antialiased pl-9 pt-0 mt-0 text-[16px] h-44 font-normal font-outfit text-[#525f81]'>
-                                            If you are looking for a company that provides the opportunity to flourish your talents and showcase your creativity with the highest amount of flexibility, then look no further. innovate international is here for you. Working with us will not only benefit you financially but also give a lifelong experience and help you develop your real-life skills as well. We ensure the utmost friendly environment for every single employee and consider the whole team as a family.
+                                {data.map((item, index) => {
+                                    return (
+                                        <div key={index} className='block relative w-full bg-white px-6 py-3 rounded-lg'>
+                                            <button onClick={() => toggle(index)} className='w-full py-4 border-b border-b-blue-gray-100 antialiased text-xl text-left font-semibold leading-snug select-none hover:text-blue-gray-900 transition-colors text-blue-gray-900 flex items-center justify-start gap-4 border-none font-outfit'>
+                                                {selected === index ? '+' : '-'}
+                                                <span className='text-[16px] font-semibold text-[#313e5b]'>{item.question}</span>
+                                            </button>
+                                            <div className='overflow-hidden h-auto'>
+                                                <div className={`${selected === index ? 'max-h-[999px] h-auto' : 'max-h-0 h-0'} block w-full py-[1.8] antialiased pl-9 pt-0 mt-0 text-[16px] h-44 font-normal font-outfit text-[#525f81`}>
+                                                    {item.answer}
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className='block relative w-full bg-white px-6 py-3 rounded-lg'>
-                                    <button className='w-full py-4 border-b border-b-blue-gray-100 antialiased text-xl text-left font-semibold leading-snug select-none hover:text-blue-gray-900 transition-colors text-blue-gray-900 flex items-center justify-start gap-4 border-none font-outfit'>
-                                        -
-                                        <span className='text-[16px] font-semibold text-[#313e5b]'>Whom do we look for?</span>
-                                    </button>
-                                    <div className='overflow-hidden h-auto'>
-                                        <div className='block w-full py-4 antialiased pl-9 pt-0 mt-0 text-[16px] h-44 font-normal font-outfit text-[#525f81]'>
-                                            Anyone, even you. Yes, if you are passionate about your work, if you are ready for taking up challenges and conquering them if you have the enthusiasm to learn new things as well as to share your wisdom if you are a person who believes in sharing interpersonal skills and growing together, then you are the perfect match that we are looking for.
-                                        </div>
-                                    </div>
-                                </div>
+                                    );
+                                })}
                             </div>
                             <img className='object-cover h-96 mx-auto' src='../../assets/images.png' />
                         </div>
@@ -56,40 +63,12 @@ const JoinUs = () => {
                     </div>
                 </div>
                 <div className='class="bg-[#FAFAFA]"'>
-                    <div className=' px-3 sm:px-5 md:px-10 2xl:px-[135px] max-w-[1366px] mx-auto  '>
+                    <div id='#joinUs' className=' px-3 sm:px-5 md:px-10 2xl:px-[135px] max-w-[1366px] mx-auto  '>
                         <div className='flex justify-center'>
                             <p className='text-[30px] border-b-2 border-[#FCB8A6] text-[#E01F26] font-semibold text-center pt-8 pb-1 inline-block'>OPEN POSITIONS</p>
                         </div>
                         <div className='flex flex-col gap-5 pb-12 mt-6'>
-                            <div className='border gap-6 bg-white p-6 flex flex-col rounded-xl'>
-                                <div className='flex flex-col md:flex-row md:justify-between md:items-center'>
-                                    <div className=''>
-                                        <div className='flex items-center gap-x-3 text-[18px] font-semibold font-outfit'>
-                                            <i>B</i>
-                                            <h1>UI/UX Design Intern</h1>
-                                        </div>
-                                        <div className='flex items-center mt-4 gap-x-5'>
-                                            <div className='bg-[#fdf7f7] px-4 py-[6px] capitalize rounded-md text-xs sm:text-sm font-semibold'>internship</div>
-                                            <div className='bg-[#fdf7f7] px-4 py-[6px] rounded-md text-xs sm:text-sm font-semibold'>Gulshan 1</div>
-                                        </div>
-                                    </div>
-                                    <div className='md:flex md:flex-col p-2 md:justify-center md:items-center gap-4 mt-3 md:mt-0'>
-                                        <p className='flex w-full items-center gap-x-2 font-semibold'>$ Industry Standard</p>
-                                        <div className='w-full mt-5 md:mt-0'>
-                                            <Link to='' className='px-4 sm:px-8 py-2 sm:py-2.5 bg-[#E01F26] hover:bg-[#971B1F] text-sm font-semibold text-white leading-[20px] rounded-[24px] mt-5 md:mt-0'>
-                                                APPLY NOW
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className='flex flex-col gap-6'>
-                                        <div className='block relative w-full'>
-                                            <button className='w-full py-4 border-b border-b-blue-gray-100 text-blue-gray-700 antialiased text-xl text-left font-semibold leading-snug select-none hover:text-blue-gray-900 transition-colors flex items-center justify-start gap-4 border-none font-outfit'>+ More Details</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <FetchApi />
                         </div>
                     </div>
                 </div>
