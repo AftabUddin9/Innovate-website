@@ -7,8 +7,12 @@ const FetchApi = () => {
 
     const [jobinfo, setJobinfo] = useState([]);
 
+    const proxyUrl = 'http://localhost:8080/';
+    const apiUrl = 'https://api.innovate.llc/api/v1/jobs/getAllJobs';
+    const url = proxyUrl + apiUrl;
+
     useEffect(() => {
-        axios.get('https://api.innovate.llc/api/v1/jobs/getAllJobs')
+        axios.get(url)
             .then(res => { setJobinfo(res.data.data) })
             .catch(err => console.log(err))
     }, [])
